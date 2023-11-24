@@ -46,10 +46,13 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="main.php">Home</a>
+                            <a class="nav-link <?php if ($active == 'home')  echo 'active' ?>" aria-current="page" href="main.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categories_ui.php">Categories</a>
+                            <a class="nav-link <?php if ($active == 'categories')  echo 'active' ?>" href="categories_ui.php">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if ($active == 'products')  echo 'active' ?>" href="products_show.php">products</a>
                         </li>
                     </ul>
                     <form class="d-flex">

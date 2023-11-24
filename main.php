@@ -1,4 +1,5 @@
 <?php
+$active = 'home';
 include_once('header.php')
 ?>
 
