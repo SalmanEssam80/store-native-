@@ -82,6 +82,18 @@
                 <div class="alert alert-danger" role="alert">
                     <strong>Invaid Email Or Mobile</strong>
                 </div>
+            <?php } elseif (!empty($_GET['status']) && $_GET['status'] === 'not_auth') { ?>
+                <div class="alert alert-danger" role="alert">
+                    <strong>Admin Only</strong>
+                </div>
+            <?php } elseif (!empty($_GET['status']) && $_GET['status'] === 'not_found') { ?>
+                <div class="alert alert-danger" role="alert">
+                    <strong>User Not Found (Wrong Username Or Password)</strong>
+                </div>
+            <?php } elseif (!empty($_GET['status']) && $_GET['status'] === 'login_first') { ?>
+                <div class="alert alert-danger" role="alert">
+                    <strong>Must Login First</strong>
+                </div>
             <?php } ?>
             <div class="form-floating">
                 <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Email Or Mobile">
@@ -93,7 +105,7 @@
             </div>
             <div class="chechbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Remember me
+                    <input type="checkbox" name="remember_me" value="1"> Remember me
                 </label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">sing in</button>
