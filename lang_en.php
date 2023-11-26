@@ -10,4 +10,6 @@ $lang = [
     'To Our Store'=>'To Our Store',
     'lang'=>'en',
     'dir'=>'ltr',
+    'to_lang'=>'العربية',
+    'to_lang_code'=>'ar',
 ];

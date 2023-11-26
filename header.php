@@ -11,7 +11,10 @@ if (empty($_SESSION['user'])) {
         redirect_page('login_ui.php?status=login_first');
     }
 }
-require_once('lang_en.php');
+
+$def_lang = 'lang_en.php';
+if (!empty($_COOKIE['lang'])  && $_COOKIE['lang'] == 'ar') $def_lang = 'lang_ar.php';
+require_once($def_lang);
 ?>
 <!DOCTYPE html>
 <html lang="<?= $lang['lang'] ?>" dir="<?= $lang['dir'] ?>">
@@ -68,8 +71,9 @@ require_once('lang_en.php');
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <p class="fw-bold text-white m-2"><?= $lang['Welcome'] ?> <?= $_SESSION['user']['name'] ?> </p>
-                        <a href="logout_process.php" role="button" class="btn btn-secondary"><?= $lang['Logout'] ?></a>
+                        <p class="fw-bold text-white m-3"><?= $lang['Welcome'] ?> <?= $_SESSION['user']['name'] ?> </p>
+                        <a href="change_lang.php?lang=<?= $lang['to_lang_code'] ?>" role="button" class="btn btn-secondary m-2"><?= $lang['to_lang'] ?></a>
+                        <a href="logout_process.php" role="button" class="btn btn-secondary m-2"><?= $lang['Logout'] ?></a>
                     </div>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

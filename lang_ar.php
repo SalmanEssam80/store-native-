@@ -10,4 +10,6 @@ $lang = [
     'To Our Store'=>'في المتجر الخاص بنا',
     'lang'=>'ar',
     'dir'=>'rtl',
+    'to_lang'=>'English',
+    'to_lang_code'=>'en',
 ];
