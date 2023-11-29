@@ -3,7 +3,7 @@ $active = "products";
 include_once('header.php');
 require_once('config.php');
 ?>
-<main class="flex-shrink-0">
+<main class="flex-shrink-0 mt-5">
     <div class="container">
         <?php if (!empty($_GET['success']) && $_GET['success'] == "added") { ?>
             <div class="alert alert-success" role="alert">

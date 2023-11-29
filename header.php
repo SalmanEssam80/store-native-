@@ -69,6 +69,9 @@ require_once($def_lang);
                         <li class="nav-item">
                             <a class="nav-link <?php if ($active == 'products')  echo 'active' ?>" href="products_show.php"><?= $lang['Products'] ?></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if ($active == 'users')  echo 'active' ?>" href="users_show.php"><?= $lang['users'] ?></a>
+                        </li>
                     </ul>
                     <div class="d-flex">
                         <p class="fw-bold text-white m-3"><?= $lang['Welcome'] ?> <?= $_SESSION['user']['name'] ?> </p>
